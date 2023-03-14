@@ -1,0 +1,39 @@
+<view class="flex b tb ac" wx:if="{{calendar}}">
+    <view class="calendar b tb">
+        <view class="handle {{config.theme}}_handle-color fs28 b lr ac pc" wx:if="{{!config.hideHeader}}">
+            <view class="prev fs36" wx:if="{{!config.weekMode}}">
+                <text bindtap="changeDate" class="prev-handle iconfont icon-doubleleft {{config.theme}}_icon-doubleleft" data-type="prev_year"></text>
+                <text bindtap="changeDate" class="prev-handle iconfont icon-left {{config.theme}}_icon-left" data-type="prev_month"></text>
+            </view>
+            <view bindtap="doubleClickJumpToToday" class="flex date-in-handle b lr cc">{{calendar.curYear||'--'}} 年 {{calendar.curMonth||'--'}} 月</view>
+            <view class="next fs36" wx:if="{{!config.weekMode}}">
+                <text bindtap="changeDate" class="next-handle iconfont icon-right {{config.theme}}_icon-right" data-type="next_month"></text>
+                <text bindtap="changeDate" class="next-handle iconfont icon-doubleright {{config.theme}}_icon-doubleright" data-type="next_year"></text>
+            </view>
+        </view>
+        <view class="weeks b lr ac {{config.theme}}_week-color">
+            <view class="week fs28" data-idx="{{index}}" wx:for="{{calendar.weeksCh}}" wx:key="index">{{item}}</view>
+        </view>
+        <view bindtouchstart="calendarTouchstart" catchtouchend="calendarTouchend" catchtouchmove="calendarTouchmove" class="b lr wrap">
+            <view class="grid b ac pc {{config.theme}}_prev-month-date" data-idx="{{index}}" wx:for="{{calendar.prevMonthGrids}}" wx:key="index">
+                <view class="date-wrap b cc">
+                    <view class="date"> {{item.date}} </view>
+                </view>
+            </view>
+            <view bindtap="tapDate" class="grid {{item.class?item.class:''}} {{config.theme}}_normal-date b ac pc" data-idx="{{index}}" data-info="{{item}}" wx:for="{{calendar.dates}}" wx:key="index">
+                <view class="date-wrap b cc {{config.emphasisWeek&&(item.week===0||item.week===6)?config.theme+'_weekend-color':''}}">
+                    <view class="date b ac pc {{item.class?item.class:''}} {{item.isToday&&config.highlightToday?config.theme+'_today':''}} {{item.choosed?config.theme+'_choosed':''}} {{item.disable?config.theme+'_date-disable':''}} {{config.chooseAreaMode?'date-area-mode':''}}  {{calendar.todoLabelCircle&&item.showTodoLabel&&!item.choosed?config.theme+'_todo-circle todo-circle':''}}"> {{config.markToday&&item.isToday?config.markToday:item.date}} <view class="date-desc {{config.theme}}_date-desc date-desc-bottom {{item.choosed||item.isToday?'date-desc-bottom-always':''}} {{item.disable?config.theme+'_date-desc-disable':''}}" wx:if="{{config.showLunar&&item.lunar&&!item.showTodoLabel||item.showTodoLabel&&calendar.todoLabelPos!=='bottom'||config.showHolidays}}">
+                            <text class="{{config.showHolidays&&!item.showTodoLabel&&item.label&&!item.choosed?config.theme+'_date-desc-lunar':''}} {{item.type==='festival'?config.theme+'_festival':''}}">{{item.label||item.lunar.Term||item.lunar.IDayCn}}</text>
+                        </view>
+                        <view class="date-desc-bottom-always todo-dot-bottom-always {{item.todoText?'date-desc':config.theme+'_todo-dot todo-dot'}} {{config.showLunar?config.theme+'_date-desc-lunar':''}} {{calendar.todoLabelPos==='bottom'?'date-desc-bottom todo-dot-bottom':'date-desc-top todo-dot-top'}} {{calendar.showLabelAlways&&item.choosed&&calendar.todoLabelPos==='bottom'?'date-desc-bottom-always todo-dot-bottom-always':''}} {{calendar.showLabelAlways&&item.choosed&&calendar.todoLabelPos==='top'?'date-desc-top-always todo-dot-top-always':''}}" style="background-color: {{item.todoText?'':item.color||calendar.todoLabelColor}}; color: {{item.color}}" wx:if="{{item.showTodoLabel&&!calendar.todoLabelCircle}}"> {{item.todoText}} </view>
+                    </view>
+                </view>
+            </view>
+            <view class="grid b ac pc {{config.theme}}_next-month-date" data-idx="{{index}}" wx:for="{{calendar.nextMonthGrids}}" wx:key="index">
+                <view class="date-wrap b cc">
+                    <view class="date"> {{item.date}} </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

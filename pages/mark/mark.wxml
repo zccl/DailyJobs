@@ -1,0 +1,70 @@
+<view class="container page">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-spacing">
+        <view class="mark-date">
+          <view
+            bindtap="clickDateTime"
+            class="mark-date-body {{item.mark?'mark-date-body-ding':''}}"
+            data-date="{{item.real_date}}"
+            data-index="{{idx}}"
+            wx:for="{{date_time}}"
+            wx:for-index="idx"
+            wx:key="i"
+          >
+            <view class="mark-week-text">
+              <text>{{item.week}}</text>
+            </view>
+            <view class="mark-date-text">
+              <text>{{item.date}}</text>
+            </view>
+          </view>
+        </view>
+        <view
+          class="mark-bd"
+          wx-if="{{targets.length}}"
+        >
+          <view
+            bindlongtap="clickTarget"
+            bindtap="clickTargetShort"
+            class="mark-bd-card"
+            data-index="{{idx}}"
+            data-punchStatus="{{item.punchStatus}}"
+            data-tid="{{item.taskId}}"
+            data-rid="{{item.recordId}}"
+            id="{{idx}}"
+            wx:for="{{targets}}"
+            wx:for-index="idx"
+            wx:key="id"
+          >
+            <view>
+              <view
+                style="background-color: {{'#'+item.color}};"
+                class="{{'mark-bd-card-icon icon icon-'+item.icon}}"
+              ></view>
+            </view>
+            <view class="mark-bd-card-tag">
+              <text style="font-size: 16px;">{{item.title}}</text>
+              <text style="color:#999">{{item.accFinishCount}}/{{item.needFinishCount}}</text>
+            </view>
+            <view class="mark-bd-car-time">
+              <text style="font-size: 16px;">{{item.executeStartTime+'~'+item.executeEndTime}}</text>
+              <text style="color:#999">{{item.punchStatus?'已打卡':'未打卡'}}</text>
+            </view>
+            <image
+              wx:if="{{item.punchStatus}}"
+              class="punch-icon"
+              src="/images/done.png"
+            />
+          </view>
+        </view>
+        <view
+          class="absolutely-empty"
+          wx:else
+        >
+          <text>加入打卡,让我们一起自律起来吧~</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

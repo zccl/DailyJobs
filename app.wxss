@@ -1,0 +1,79 @@
+@import "./styles/iconfont-weapp-icon.wxss";
+.icon {
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+page {
+  background-color: #eeeffe;
+  /* background-color: #ebfbfc; */
+  height: 100%;
+  justify-content: center;
+  line-height: 1.6;
+}
+
+view,
+text,
+textarea,
+ul,
+li {
+  box-sizing: border-box;
+}
+
+.container,
+page {
+  display: flex;
+  font-size: 16px;
+  color: #333;
+}
+
+.container {
+  flex-direction: column;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  min-height: 100%;
+  width: 100%;
+}
+
+.page-body {
+  flex-grow: 1;
+  padding: 0 30rpx 30rpx;
+}
+
+.page-section {
+  width: 100%;
+}
+
+.page-section-spacing {
+  justify-content: center;
+}
+
+.absolutely-empty {
+  color: #879087;
+  height: 700rpx;
+  line-height: 700rpx;
+  text-align: center;
+  width: 100%;
+}
+
+action-sheet-cancel {
+  display: block;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+action-sheet-item {
+  padding: 10rpx 0;
+}
+
+action-sheet-item button {
+  background: none;
+}
+action-sheet-item button::after {
+  border: 0;
+}
+/* not 表示不支持括号内的属性 */
+/* @supports not (constant(safe-area-inset-bottom)) {
+  action-sheet-cancel {
+  }
+} */

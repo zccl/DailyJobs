@@ -1,0 +1,67 @@
+.container {
+  padding: 0 20rpx;
+}
+.type-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  border: 1rpx solid #ccc;
+  border-radius: 20rpx !important;
+  margin-top: 20rpx !important;
+}
+.card {
+  box-shadow: 0 2rpx 10rpx 0 #bbb;
+  background-color: #fff;
+  border-radius: 40rpx;
+  padding: 16rpx 20rpx;
+  margin: 6rpx 0;
+}
+.card + .card {
+  margin-top: 10rpx;
+}
+.content {
+  display: flex;
+  padding: 0 20rpx 16rpx;
+}
+.icon {
+  width: 120rpx;
+  height: 120rpx;
+  font-size: 50px;
+  border-radius: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-img {
+  width: 60rpx;
+  height: 60rpx;
+}
+.desc {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.content-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.desc-img-box {
+  display: flex;
+  align-items: center;
+  padding-top: 10rpx;
+}
+.content-detail image {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 5rpx;
+}
+.time {
+  border-top: 1rpx solid #ddd;
+  color: #999;
+  padding: 6rpx;
+  text-align: right;
+  font-size: 24rpx;
+}

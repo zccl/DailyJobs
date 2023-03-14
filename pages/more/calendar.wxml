@@ -1,0 +1,104 @@
+<view class="container page">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-spacing">
+        <view class="calendar">
+          <calendar
+            bind:afterCalendarRender="afterCalendarRender"
+            bind:afterTapDate="afterTapDate"
+            bind:whenChangeMonth="whenChangeMonth"
+            class="calendar"
+            config="{{calendarConfig}}"
+          ></calendar>
+        </view>
+        <view
+          class="record"
+          wx:if="{{year>0}}"
+        >
+          <view class="record-body">
+            <view class="record-year">
+              <text>{{year}}</text>
+            </view>
+            <view class="record-date">
+              <text>{{month}}月{{day}}</text>
+            </view>
+            <view class="record-det">
+              <text>我在这一天</text>
+            </view>
+            <view
+              class="record-list"
+              wx:if="{{records.length>0}}"
+            >
+              <view
+                class="record-one"
+                wx:for="{{records}}"
+                wx:for-index="idx"
+                wx:key="id"
+              >
+                <block wx:if="{{!item.punchTime}}">
+                  <view class="record-idot unfinished_color"></view>
+                  <view class="record-mark-time">
+                    <text>缺卡</text>
+                  </view>
+                </block>
+                <block wx:else>
+                  <view class="record-idot"></view>
+                  <view class="record-mark-time">
+                    <text>{{fn.sliceTime(item.punchTime)}}</text>
+                  </view>
+                </block>
+                <view
+                  style="background-color: {{'#'+item.color}};"
+                  class="{{'record-icon icon icon-'+item.icon}}"
+                ></view>
+                <view class="target-name">
+                  <text>{{item.title}}</text>
+                </view>
+                <!-- <view
+                  class="revoke"
+                  wx:if="{{item.punchTime}}"
+                >
+                  <button
+                    bindtap="cancelRecord"
+                    data-id="{{item.recordId}}"
+                    plain="true"
+                    size="mini"
+                    type="warn"
+                  >撤销</button>
+                </view> -->
+              </view>
+              <!-- <view
+                class="record-one"
+                wx:if="{{!item.marked}}"
+                wx:for="{{targets}}"
+                wx:for-index="idx"
+                wx:key="id"
+              >
+                <view class="record-idot unfinished_color"></view>
+                <view class="record-mark-time">
+                  <text>缺卡</text>
+                </view>
+                <view
+                  class="record-icon"
+                  style="background-color: {{'#'+item.bg_color}};"
+                >
+                  <image src="{{image_host+item.icon}}"></image>
+                </view>
+                <view class="target-name">
+                  <text>{{item.name}}</text>
+                </view>
+              </view> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<wxs module="fn">
+  module.exports = {
+    sliceTime: function (str) {
+      return str.slice(11, 16);
+    }
+  }
+</wxs>

@@ -1,0 +1,40 @@
+<view class="container page">
+    <navigator url="/pages/target/add_target">
+        <view class="add_target">
+            <image src="../../images/add.png"></image>
+        </view>
+    </navigator>
+    <mp-actionSheet actions="{{groups}}" bindactiontap="btnClick" show="{{showDialog}}" title=""></mp-actionSheet>
+    <view class="page-body">
+        <view class="page-section">
+            <view class="page-section-spacing">
+                <view class="target-empty" wx:if="{{targets.length==0}}">
+                    <text>暂无任务,请添加</text>
+                </view>
+                <view class="target-bd" wx:else>
+                    <view bindtap="openDialog" class="target-list-one" data-id="{{target.id}}" wx:for="{{targets}}" wx:for-index="tid" wx:for-item="target" wx:key="id">
+                        <view class="target-list-left">
+                            <image src="{{image_host+target.icon}}" style="background-color: {{'#'+target.bg_color}};"></image>
+                        </view>
+                        <view class="target-list-center">
+                            <view class="target-title">
+                                <text>{{target.name}}</text>
+                            </view>
+                            <view class="target-mark-days">
+                                <text>已完成{{target.finish_days}}天打卡</text>
+                            </view>
+                        </view>
+                        <view class="target-list-right">
+                            <view class="target-remain-day">
+                                <text>{{target.remain_days}}天</text>
+                            </view>
+                            <view class="target-remain">
+                                <text>距目标完成还剩</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

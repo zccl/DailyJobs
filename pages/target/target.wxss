@@ -1,0 +1,97 @@
+.target-bd {
+    width: 100%;
+}
+
+.target-list-one {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -3rpx 6rpx 5rpx #f5f2f22d;
+    height: 140rpx;
+    margin-top: 20rpx;
+}
+
+.target-list-left {
+    float: left;
+    height: 140rpx;
+    margin: 0 30rpx;
+    width: 80rpx;
+}
+
+.target-list-left image {
+    border-radius: 50%;
+    height: 80rpx;
+    justify-items: center;
+    margin: 30rpx auto;
+    width: 80rpx;
+}
+
+.target-list-center {
+    float: left;
+    height: 114rpx;
+    margin-top: 26rpx;
+    width: 280rpx;
+}
+
+.target-list-right {
+    float: right;
+    height: 114rpx;
+    margin: 26rpx 30rpx 0 0;
+    width: 220rpx;
+}
+
+.target-title {
+    font-size: .95em;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.target-mark-days {
+    color: #aeafb3;
+    font-size: .7em;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    width: 100%;
+}
+
+.target-remain-day {
+    font-size: .95em;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: right;
+    width: 100%;
+}
+
+.target-remain {
+    color: #353536;
+    font-size: .7em;
+    height: 1.3em;
+    line-height: 1.3rem;
+    text-align: right;
+}
+
+.add_target {
+    background-color: #fff;
+    border-radius: 50%;
+    bottom: 50rpx;
+    position: fixed;
+    right: 40rpx;
+}
+
+.add_target,.add_target image {
+    height: 80rpx;
+    width: 80rpx;
+}
+
+.target-empty {
+    color: #879087;
+    font-size: .9em;
+    height: 800rpx;
+    line-height: 800rpx;
+    text-align: center;
+    width: 100%;
+}

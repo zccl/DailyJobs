@@ -1,0 +1,59 @@
+.feedback-body {
+    background-color: #fff;
+    border-radius: 25rpx;
+    margin-top: 30rpx;
+    padding: 1rpx 30rpx 30rpx;
+}
+
+.feedback-title {
+    font-size: .9em;
+    height: 60rpx;
+    margin-top: 30rpx;
+    width: 100%;
+}
+
+.feedback-type-select {
+    align-items: center;
+    border-bottom: 1px solid #6f6f6f24;
+    display: flex;
+    justify-content: flex-start;
+    padding: 15rpx 0 25rpx;
+    width: 100%;
+}
+
+.select-card {
+    border: 1px solid #6f6c6c61;
+    border-radius: 10rpx;
+    color: #423f3fb5;
+    font-size: .75em;
+    height: 45rpx;
+    line-height: 45rpx;
+    margin: 2rpx 20rpx 2rpx 0;
+    text-align: center;
+    width: 130rpx;
+}
+
+.select-card-focus {
+    background-color: #d89825ab;
+    border-color: #dca33bb0;
+    color: #fff;
+}
+
+.feedback-content textarea {
+    color: #616060;
+    font-size: .8em;
+    height: 240rpx;
+    width: 100%;
+}
+
+.feedback-placeholder {
+    color: #6f6c6c61;
+    width: 100%;
+}
+
+.feedback-contact {
+    font-size: .8em;
+    height: 60rpx;
+    margin: 20rpx 0;
+    width: 100%;
+}

@@ -1,0 +1,28 @@
+<view class="container page">
+    <view class="page-body">
+        <view class="page-section">
+            <view class="page-section-spacing">
+                <view class="feedback-body">
+                    <view class="feedback-title">
+                        <text>问题类型（必选）</text>
+                    </view>
+                    <view class="feedback-type-select">
+                        <block wx:for="{{feedback_type}}" wx:for-index="idx" wx:key="name">
+                            <view bindtap="changeType" class="select-card select-card-focus" data-id="{{idx}}" wx:if="{{item.select}}">{{item.name}}</view>
+                            <view bindtap="changeType" class="select-card" data-id="{{idx}}" wx:else>{{item.name}}</view>
+                        </block>
+                    </view>
+                    <view class="feedback-title">
+                        <text>问题描述（必填）</text>
+                    </view>
+                    <view class="feedback-content">
+                        <textarea bindinput="changeContent" maxlength="200" placeholder="请详细描述您遇到的问题或者提供宝贵的建议，我们会非常的重视" placeholderClass="feedback-placeholder"></textarea>
+                    </view>
+                    <view class="feedback-submit">
+                        <button bindtap="submit" type="primary">提交</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

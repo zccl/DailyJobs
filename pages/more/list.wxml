@@ -1,0 +1,65 @@
+<view class="container">
+  <view
+    class="type-box card"
+    bindtap="openActionSheet"
+  >
+    <text>{{typeList[typeIndex].text}}</text>
+    <text>></text>
+  </view>
+  <mp-actionSheet
+    actions="{{typeList}}"
+    bindactiontap="bindChange"
+    show="{{showActionSheet}}"
+  ></mp-actionSheet>
+  <view wx:if="{{list.length}}">
+    <view
+      class="card"
+      wx:for="{{list}}"
+      wx:key="index"
+      bindtap="handleTap"
+    >
+      <view class="content">
+        <view style="margin-right: 40rpx;">
+          <view style="text-align: center;font-size: 28rpx;margin-bottom: 20rpx;">
+            {{item.title}}
+          </view>
+          <view
+            style="background-color: {{'#'+item.color}};"
+            class="{{'icon icon-'+item.icon}}"
+          >
+          </view>
+        </view>
+        <view class="content-detail">
+          <view class="desc">
+            {{item.mention}}
+          </view>
+          <view class="desc-img-box">
+            <image
+              wx:for="{{fn.mappingUrl(item.picture)}}"
+              wx:key="index"
+              src="{{item}}"
+            />
+          </view>
+        </view>
+      </view>
+      <view class="time">
+        {{item.punchTime}}
+      </view>
+    </view>
+  </view>
+  <view
+    class="absolutely-empty"
+    wx:else
+  >
+    <text>空空如也~</text>
+  </view>
+</view>
+
+<wxs module="fn">
+  module.exports = {
+    mappingUrl: function (str) {
+      console.log(str.split(','));
+      return str.split(',');
+    }
+  }
+</wxs>

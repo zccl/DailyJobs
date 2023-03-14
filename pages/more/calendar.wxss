@@ -1,0 +1,137 @@
+.calendar {
+  margin-top: 10rpx;
+  padding-bottom: 15rpx;
+}
+
+.calendar,
+.record {
+  background-color: #fff;
+  border-radius: 25rpx;
+  width: 100%;
+}
+
+.record {
+  margin-top: 50rpx;
+  padding-bottom: 45rpx;
+}
+
+.record-body {
+  margin-left: 40rpx;
+  padding-top: 40rpx;
+}
+
+.record-year {
+  color: #a7a2a2;
+  font-size: 0.8em;
+  font-weight: 500;
+  height: 30rpx;
+  line-height: 30rpx;
+  width: 100%;
+}
+
+.record-date {
+  color: #5f5858;
+  font-size: 0.95em;
+  font-weight: 400;
+  height: 45rpx;
+  line-height: 45rpx;
+  width: 100%;
+}
+
+.record-det {
+  color: #a7a2a2;
+  font-size: 0.65em;
+  font-weight: 500;
+  height: 30rpx;
+  line-height: 30rpx;
+  width: 100%;
+}
+
+.record-list {
+  border-left: 1px solid #cac5c5;
+  margin-top: 20rpx;
+}
+
+.record-one {
+  height: 100rpx;
+  padding: 0 0 40rpx;
+  width: 100%;
+}
+
+.record-one:last-child {
+  padding: 0;
+}
+
+.record-idot {
+  background-color: #67c23a;
+  border-radius: 50%;
+  float: left;
+  height: 5px;
+  margin: 26rpx 26rpx 26rpx -3px;
+  width: 5px;
+}
+
+.record-mark-time {
+  color: #c0c4cc;
+  float: left;
+  font-size: 0.85em;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 70rpx;
+}
+
+.record-icon {
+  border-radius: 50%;
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 35rpx;
+  width: 60rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.record-icon image {
+  height: 50rpx;
+  margin: 5rpx;
+  width: 50rpx;
+}
+
+.target-name {
+  color: #606266;
+  float: left;
+  margin-left: 16rpx;
+  text-overflow: ellipsis;
+}
+
+.revoke,
+.target-name {
+  font-size: 0.9em;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.revoke {
+  float: right;
+  margin-right: 30rpx;
+  width: 100rpx;
+}
+
+.revoke button {
+  font-size: 0.75em;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 5rpx;
+  text-align: center;
+  width: 100%;
+}
+
+.make_up_color {
+  background-color: #e6a23c;
+}
+
+.unfinished_color {
+  background-color: #f56c6c;
+}

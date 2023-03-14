@@ -1,0 +1,51 @@
+<view class="container page">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-spacing">
+        <view
+          class="mark-bd"
+          wx:if="{{targets.length}}"
+        >
+          <view
+            bindlongtap="openActionSheet"
+            bindtap="openActionSheet"
+            class="mark-bd-card"
+            data-index="{{idx}}"
+            data-id="{{item.taskId}}"
+            id="card_{{idx}}"
+            wx:for="{{targets}}"
+            wx:for-index="idx"
+            wx:key="id"
+          >
+            <view>
+              <view
+                style="background-color: {{'#'+item.color}};"
+                class="{{'mark-bd-card-icon icon icon-'+item.icon}}"
+              ></view>
+            </view>
+            <view class="mark-bd-card-tag">
+              <text style="font-size: 16px;">{{item.title}}</text>
+              <text style="color:#999">已完成{{item.accFinishCount}}天打卡</text>
+            </view>
+            <view class="mark-bd-car-time">
+              <text style="font-size: 16px;">{{item.executeStartTime+'~'+item.executeEndTime}}</text>
+              <text style="color:#999">完成度 {{item.finishRate}}%</text>
+            </view>
+          </view>
+        </view>
+        <view
+          class="absolutely-empty"
+          wx:else
+        >
+          <text>空空如也~</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <mp-actionSheet
+    actions="{{actionList}}"
+    bindactiontap="bindChange"
+    show="{{showActionSheet}}"
+    title=""
+  ></mp-actionSheet>
+</view>

@@ -1,0 +1,100 @@
+<view class="container page">
+  <view class="tech-support">
+    <text>当前版本: v{{version}}</text>
+  </view>
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-spacing">
+        <view class="more-head">
+          <van-button
+            class="avatar-button"
+            icon="{{avatar}}"
+            color="transparent"
+            open-type="chooseAvatar"
+            bind:chooseavatar="onChooseAvatar"
+            round
+          />
+          <!-- <view class="more-head">
+          <view class="more-head-left">
+            <image
+              class="more-avatar"
+              src="{{avatar}}"
+            ></image>
+            <van-button
+              icon="/images/photo.png"
+              color="transparent"
+              open-type="chooseAvatar"
+              bind:chooseavatar="onChooseAvatar"
+              round
+            />
+          </view> -->
+          <!-- <form bindsubmit="onSaveAvatarNickname"> -->
+          <view class="more-head-center">
+            <view class="more-head-id">
+              <input
+                wx:if="{{editing}}"
+                type="nickname"
+                class="weui-input"
+                placeholder="请输入昵称"
+                value="{{input_nickName}}"
+                bind:change="inputNickname"
+              />
+              <text
+                wx:else
+                class="more-head-id-number"
+              >{{nickName}}</text>
+            </view>
+            <button
+              wx:if="{{editing}}"
+              class="mini-btn"
+              form-type="submit"
+              type="primary"
+              size="mini"
+              bindtap="onSaveAvatarNickname"
+            >确定</button>
+            <image
+              src="/images/edit.png"
+              bindtap="handleEdit"
+              wx:else
+            />
+          </view>
+          <!-- </form> -->
+        </view>
+        <view class="more-item">
+          <view class="item">
+            <navigator url="/pages/more/create">我创建的任务</navigator>
+          </view>
+          <view class="item">
+            <navigator url="/pages/more/join">我加入的任务</navigator>
+          </view>
+        </view>
+        <view class="more-body">
+          <view
+            bindtap="tabMore"
+            class="more-list"
+            data-url="{{item.url}}"
+            wx:for="{{menus}}"
+            wx:for-index="idx"
+            wx:key="icon"
+          >
+            <view class="more-list-icon">
+              <image src="/images/{{item.icon}}"></image>
+            </view>
+            <view class="more-list-name">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="more-list-tip">
+              <image src="/images/arrow.png"></image>
+            </view>
+            <view
+              class="more-list-notice"
+              wx:if="{{item.name=='我的消息'&&notice_count>0}}"
+            >
+              <text>{{notice_count}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

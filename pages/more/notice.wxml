@@ -1,0 +1,27 @@
+<view class="container page">
+    <view class="page-body">
+        <view class="page-section">
+            <view class="page-section-spacing">
+                <view class="notice" wx:for="{{notices}}">
+                    <view class="notice-date">
+                        <text>{{item.date}}</text>
+                    </view>
+                    <view class="notice-body">
+                        <view class="notice-top">
+                            <view class="notice-title">
+                                <text>{{item.title}}</text>
+                            </view>
+                            <view class="notice-time">
+                                <text>{{item.time}}</text>
+                            </view>
+                        </view>
+                        <view class="notice-line"></view>
+                        <view class="notice-bottom">
+                            <text>{{item.contents}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+<view
+  class="box"
+  wx:if="{{item.title}}"
+>
+  <view class="card">
+    <view class="mark-bd-card-title">
+      <view
+        style="background-color: {{'#'+item.color}};"
+        class="{{'icon icon-'+item.icon}}"
+      ></view>
+      <text>{{item.title}}</text>
+    </view>
+    <view class="mark-bd-card-date">
+      打卡周期: {{item.startTime+'~'+item.endTime}}
+    </view>
+    <view class="mark-bd-car-time">
+      打卡时间: {{item.executeStartTime+'~'+item.executeEndTime}}
+    </view>
+  </view>
+  <view
+    bindtap="join"
+    class="add-target-line target-submit"
+  >
+    <text>加入打卡, 一起自律起来! </text>
+  </view>
+</view>

@@ -1,0 +1,175 @@
+view {
+  box-sizing: content-box;
+}
+.container {
+  width: 100vw;
+}
+.page-add-target {
+  box-sizing: border-box;
+  color: #5d4e4e;
+  font-size: 0.9em;
+}
+
+.target-title {
+  float: left;
+  height: 70rpx;
+  margin: 0 20rpx;
+}
+
+.target-title-input {
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 400rpx;
+}
+
+.bg-target {
+  background-color: #e4e1e161 !important;
+}
+
+.weui-input {
+  background-color: #f1ecec5d;
+  border: 0.1em solid #c6c6c6;
+  border-radius: 0.3em;
+  height: 2em;
+  line-height: 2em;
+  width: 100%;
+}
+
+.add-icons-list {
+  background-color: #e4d9d926;
+  margin-top: 10rpx;
+  width: 100%;
+}
+
+.icon {
+  height: 60rpx;
+  width: 60rpx;
+  line-height: 60rpx;
+  font-size: 60rpx;
+}
+
+.add-icons-list .icon {
+  background-color: #c6c7d07a;
+  border: 1rpx solid #e4d9d979;
+  border-radius: 15rpx;
+  height: 60rpx;
+  margin: 20rpx;
+  width: 60rpx;
+  font-size: 60rpx;
+  line-height: 60rpx;
+}
+
+.add-icons-list scroll-view {
+  height: 100%;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.icon-one-box {
+  border: 1rpx solid #e4d9d979;
+  border-radius: 15rpx;
+  height: 60rpx;
+  margin: 20rpx;
+  width: 60rpx;
+}
+
+.icon-color-pick {
+  border-color: #8c6e6e6e !important;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.icon-sroll-w {
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 2440rpx;
+}
+
+.add-target-line {
+  background-color: #e4e1e161;
+}
+
+.add-target-line,
+.repeat-line {
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 25rpx;
+  padding: 10rpx 0;
+  width: 100%;
+}
+
+.repeat-line {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
+.repeat-day {
+  background-color: #f7e728;
+  border-radius: 22rpx;
+  font-size: 0.9em;
+  margin: 0 10rpx;
+  text-align: center;
+  width: 90rpx;
+}
+
+.pick-left {
+  float: left;
+  margin-left: 20rpx;
+}
+
+.pick-right {
+  width: 50%;
+}
+
+.pick-right,
+.pick-right-tip {
+  float: right;
+  height: 70rpx;
+  padding-right: 20rpx;
+}
+
+.pick-right-tip {
+  color: #afabab;
+  line-height: 66rpx;
+}
+
+.pick-input {
+  text-align: right;
+}
+
+.pick-right text {
+  float: right;
+  text-align: right;
+}
+
+.target-submit {
+  align-items: center;
+  background-color: #d18a8f;
+  border-radius: 17rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.target-submit text {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.pick-center {
+  float: left;
+  height: 70rpx;
+  padding-right: 20rpx;
+}
+
+.pick-center view {
+  border-radius: 15rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+  width: 60rpx;
+}

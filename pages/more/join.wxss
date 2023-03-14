@@ -1,0 +1,100 @@
+.mark-bd {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.mark-bd-card {
+  width: 100%;
+  box-shadow: 0 2rpx 20rpx 0 #bbb;
+  background-color: #fff;
+  border-radius: 40rpx;
+  padding: 20rpx 30rpx;
+  margin: 8rpx 0;
+  display: flex;
+}
+
+.mark-bd-card > view {
+  flex: 1;
+}
+
+.mark-bd-card-icon {
+  border-radius: 50%;
+  font-size: 80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100rpx;
+  text-align: center;
+}
+
+.mark-bd-card-tag {
+  font-size: 0.95em;
+  margin: 0 25rpx;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.mark-bd-car-time {
+  font-size: 0.95em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.mark-date {
+  background-color: #eeeffe;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  left: 0;
+  margin: auto;
+  padding: 20rpx 30rpx 5rpx;
+  position: fixed;
+  right: 0;
+  top: -1rpx;
+  width: 680rpx;
+}
+
+.mark-date-body {
+  color: #747577;
+  font-size: 1em;
+  margin: auto 1px;
+  padding: 0 20rpx;
+  text-align: center;
+}
+
+.mark-date-body-ding {
+  color: #272b33;
+}
+
+.mark-date-body text {
+  height: 20px;
+  line-height: 20px;
+}
+
+.mark-week-text {
+  font-size: 0.8em;
+}
+
+.mark-date-text,
+.mark-finish {
+  font-size: 0.9em;
+}
+
+.mark-finish {
+  color: #879087;
+  height: 700rpx;
+  line-height: 700rpx;
+  text-align: center;
+  width: 100%;
+}

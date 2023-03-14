@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "打卡记录",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "mp-actionSheet": "/miniprogram_npm/weui-miniprogram/actionsheet/actionsheet"
+  }
+}

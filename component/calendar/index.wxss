@@ -1,0 +1,410 @@
+@font-face {
+    font-family: iconfont;
+    font-style: normal;
+    font-weight: 400;
+    src: url(data:font/truetype;charset=utf-8;base64,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) format("truetype");
+}
+
+.iconfont {
+    -webkit-font-smoothing: antialiased;
+    font-family: iconfont!important;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.icon-right::before {
+    content: "\e7eb";
+}
+
+.icon-left::before {
+    content: "\e7ec";
+}
+
+.icon-doubleleft::before {
+    content: "\e7ed";
+}
+
+.icon-doubleright::before {
+    content: "\e7ee";
+}
+
+.default_color,.default_handle-color,.default_week-color,.default_weekend-color {
+    color: #ff629a;
+}
+
+.default_today {
+    background-color: #874fb4;
+    color: #fff;
+}
+
+.default_choosed {
+    background-color: #ff629a;
+    color: #fff;
+}
+
+.default_date-disable {
+    color: #c7c7c7;
+}
+
+.default_choosed.default_date-disable {
+    background-color: #c2afb6;
+    color: #e2e2e2;
+}
+
+.default_next-month-date,.default_prev-month-date {
+    color: #e2e2e2;
+}
+
+.default_normal-date {
+    color: #88d2ac;
+}
+
+.default_todo-circle {
+    border-color: #88d2ac;
+}
+
+.default_todo-dot {
+    background-color: #e54d42;
+}
+
+.default_date-desc {
+    color: #c2c2c2;
+}
+
+.default_date-desc-lunar {
+    color: #e54d42;
+}
+
+.default_date-desc-disable {
+    color: #e2e2e2;
+}
+
+.default_festival {
+    color: #c2c2c2;
+}
+
+.elegant_color,.elegant_handle-color,.elegant_week-color,.elegant_weekend-color {
+    color: #333;
+}
+
+.elegant_today {
+    color: #000;
+}
+
+.elegant_choosed {
+    background-color: #e2e2e2;
+    color: #000;
+}
+
+.elegant_date-disable {
+    color: #c7c7c7;
+}
+
+.elegant_choosed.elegant_date-disable {
+    background-color: #ebebeb;
+    color: #999;
+}
+
+.elegant_next-month-date,.elegant_prev-month-date {
+    color: #e2e2e2;
+}
+
+.elegant_normal-date {
+    color: #777;
+}
+
+.elegant_todo-circle {
+    border-color: #161035;
+}
+
+.elegant_todo-dot {
+    background-color: #161035;
+}
+
+.elegant_date-desc {
+    color: #c2c2c2;
+}
+
+.elegant_date-desc-lunar {
+    color: #161035;
+}
+
+.elegant_date-desc-disable {
+    color: #e2e2e2;
+}
+
+.elegant_festival {
+    color: #c2c2c2;
+}
+
+.mark_color,.mark_handle-color,.mark_weekend-color {
+    color: #333;
+}
+
+.mark_icon-doubleleft,.mark_icon-doubleright,.mark_icon-left,.mark_icon-right {
+    color: #4b5861;
+}
+
+.mark_today {
+    color: #409eff;
+}
+
+.mark_choosed {
+    background-color: #409eff;
+    color: #fff;
+}
+
+.mark_date-disable {
+    color: #c7c7c7;
+}
+
+.mark_choosed.mark_date-disable {
+    background-color: #ebebeb;
+    color: #999;
+}
+
+.mark_next-month-date,.mark_prev-month-date {
+    color: #e2e2e2;
+}
+
+.mark_normal-date {
+    color: #777;
+}
+
+.mark_todo-circle {
+    border-color: #161035;
+}
+
+.mark_todo-dot {
+    background-color: #161035;
+}
+
+.mark_date-desc {
+    color: #c2c2c2;
+}
+
+.mark_date-desc-lunar {
+    color: #161035;
+}
+
+.mark_date-desc-disable {
+    color: #e2e2e2;
+}
+
+.mark_festival {
+    color: #c2c2c2;
+}
+
+.b {
+    display: flex;
+}
+
+.lr {
+    flex-direction: row;
+}
+
+.tb {
+    flex-direction: column;
+}
+
+.pc {
+    justify-content: center;
+}
+
+.ac,.cc {
+    align-items: center;
+}
+
+.cc {
+    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.flex {
+    flex-grow: 1;
+}
+
+.bg {
+    background-image: linear-gradient(180deg,#faefe7,#ffcbd7);
+    overflow: hidden;
+}
+
+.white-color {
+    color: #fff;
+}
+
+.fs24 {
+    font-size: 24rpx;
+}
+
+.fs28 {
+    font-size: 28rpx;
+}
+
+.fs32 {
+    font-size: 32rpx;
+}
+
+.fs36 {
+    font-size: 36rpx;
+}
+
+.calendar {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.handle {
+    height: 80rpx;
+}
+
+.next-handle,.prev-handle {
+    padding: 20rpx;
+}
+
+.date-in-handle {
+    height: 80rpx;
+}
+
+.weeks {
+    height: 50rpx;
+    line-height: 50rpx;
+    opacity: .5;
+}
+
+.week {
+    text-align: center;
+}
+
+.grid,.week {
+    width: 14.286014285714286%;
+}
+
+.date-wrap {
+    height: 80rpx;
+    width: 100%;
+}
+
+.date,.date-wrap {
+    left: 0;
+    position: relative;
+    top: 0;
+}
+
+.date {
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-name: choosed;
+    animation-timing-function: linear;
+    border-radius: 50%;
+    font-size: 26rpx;
+    font-weight: 200;
+    height: 55rpx;
+    line-height: 55rpx;
+    text-align: center;
+    transition: all .3s;
+    width: 55rpx;
+}
+
+.date-area-mode {
+    border-radius: 0;
+    width: 100%;
+}
+
+.date-desc {
+    -webkit-line-clamp: 1;
+    font-size: 20rpx;
+    height: 32rpx;
+    left: 50%;
+    line-height: 32rpx;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    width: 150%;
+    word-break: break-all;
+}
+
+@-webkit-keyframes choosed {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes choosed {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.todo-circle {
+    border-style: solid;
+    border-width: 1rpx;
+    box-sizing: border-box;
+}
+
+.todo-dot {
+    border-radius: 50%;
+    height: 10rpx;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 10rpx;
+}
+
+.todo-dot-top {
+    top: 3rpx;
+}
+
+.todo-dot.todo-dot-top-always {
+    top: -8rpx;
+}
+
+.todo-dot.todo-dot-bottom {
+    bottom: 0;
+}
+
+.todo-dot.todo-dot-bottom-always {
+    bottom: -12rpx;
+}
+
+.date-desc.date-desc-top {
+    top: -6rpx;
+}
+
+.date-desc.date-desc-top-always {
+    top: -20rpx;
+}
+
+.date-desc.date-desc-bottom {
+    bottom: -14rpx;
+}
+
+.todo-circle .date-desc.date-desc-bottom {
+    bottom: -30rpx;
+}
+
+.date-desc.date-desc-bottom-always {
+    bottom: -28rpx;
+}

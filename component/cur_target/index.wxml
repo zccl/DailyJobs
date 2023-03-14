@@ -1,0 +1,197 @@
+<view class="container page">
+  <view class="page-body">
+    <view class="page-add-target">
+      <view class="add-target-line bg-target">
+        <view class="pick-center">
+          <view
+            style="background-color: {{'#'+pick_icon.color}};"
+            class="{{'icon icon-'+pick_icon.class_name}}"
+            wx:if="{{pick_icon.class_name}}"
+          ></view>
+          <!-- <image
+            src="{{image_host+pick_icon.name}}"
+            style="background-color: {{'#'+pick_icon.color}};"
+            wx:if="{{pick_icon.name}}"
+          ></image> -->
+        </view>
+        <view class="target-title">
+          <input
+            bindinput="changeTargetName"
+            class="target-title-input"
+            maxlength="64"
+            placeholder="请输入目标名称"
+            type="text"
+            value="{{target_name}}"
+          ></input>
+        </view>
+      </view>
+      <view class="add-target-line">
+        <view class="pick-left">
+          <text>请选择图标及颜色</text>
+        </view>
+      </view>
+      <view class="add-icons-list">
+        <scroll-view
+          enableFlex="true"
+          scrollX="true"
+        >
+          <view class="icon-sroll-w">
+            <block
+              wx:for="{{icon_colors}}"
+              wx:for-index="id"
+              wx:for-item="value"
+              wx:key="key"
+            >
+              <view
+                bindtap="pickColor"
+                class="icon-one-box icon-color-pick"
+                data-id="{{id}}"
+                style="background-color:{{'#'+value.color}};"
+                wx:if="{{value.pick}}"
+              ></view>
+              <view
+                bindtap="pickColor"
+                class="icon-one-box"
+                data-id="{{id}}"
+                style="background-color:{{'#'+value.color}};"
+                wx:else
+              ></view>
+            </block>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="add-icons-list">
+        <scroll-view
+          enableFlex="true"
+          scrollX="true"
+        >
+          <view class="icon-sroll-w">
+            <block
+              wx:for="{{icons}}"
+              wx:for-index="id"
+              wx:for-item="value"
+              wx:key="id"
+            >
+              <!-- <image
+                bindtap="pickIcon"
+                data-id="{{id}}"
+                src="{{image_host+value.icon}}"
+                style="background-color: {{'#'+pick_color}};"
+                wx:if="{{value.pick}}"
+              ></image>
+              <image
+                bindtap="pickIcon"
+                data-id="{{id}}"
+                src="{{image_host+value.icon}}"
+                wx:else
+              ></image> -->
+              <view
+                bindtap="pickIcon"
+                data-id="{{id}}"
+                style="background-color: {{value.pick?'#'+pick_color:'none'}};"
+                class="{{'icon icon-'+value.class_name}}"
+              ></view>
+            </block>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="add-target-line">
+        <view class="pick-left">
+          <text>开始日期</text>
+        </view>
+        <view class="pick-right-tip">
+          <text>></text>
+        </view>
+        <view class="pick-right">
+          <picker
+            bindchange="startDateChange"
+            end="2030-12-31"
+            mode="date"
+            start="{{begain_date}}"
+            value="{{start_date}}"
+          >
+            <view class="pick-input">{{start_date}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="add-target-line">
+        <view class="pick-left">
+          <text>结束日期</text>
+        </view>
+        <view class="pick-right-tip">
+          <text>></text>
+        </view>
+        <view class="pick-right">
+          <picker
+            bindchange="endDateChange"
+            end="2030-12-31"
+            mode="date"
+            start="{{begain_date}}"
+            value="{{end_date}}"
+          >
+            <view class="pick-input">{{end_date}}</view>
+          </picker>
+        </view>
+      </view>
+      <!-- <view class="add-target-line">
+        <view class="pick-left">
+          <text>重复方式</text>
+        </view>
+        <view class="pick-right">
+          <text>{{repeat_type}}</text>
+        </view>
+      </view>
+      <view class="repeat-line">
+        <block
+          wx:for="{{repeat_days}}"
+          wx:for-index="id"
+          wx:for-item="value"
+          wx:key="key"
+        >
+          <view
+            bindtap="pickDay"
+            class="repeat-day"
+            data-id="{{id}}"
+            wx:if="{{value.pick}}"
+          >
+            <text data-id="{{id}}">{{value.name}}</text>
+          </view>
+          <view
+            bindtap="pickDay"
+            class="repeat-day"
+            data-id="{{id}}"
+            style="background-color: #eae9e9;"
+            wx:else
+          >
+            <text data-id="{{id}}">{{value.name}}</text>
+          </view>
+        </block>
+      </view> -->
+      <view class="add-target-line">
+        <view class="pick-left">
+          <text>任务时间</text>
+        </view>
+        <view class="pick-right-tip">
+          <text>></text>
+        </view>
+        <view class="pick-right">
+          <picker
+            bindchange="timeChange"
+            mode="multiSelector"
+            range="{{time_pick_list}}"
+            value="{{time_select}}"
+          >
+            <view class="pick-input">{{start_time+'~'+end_time}}</view>
+          </picker>
+        </view>
+      </view>
+      <view
+        bindtap="submitTarget"
+        class="add-target-line target-submit"
+        style="padding: 16rpx 0;"
+      >
+        <text>提交</text>
+      </view>
+    </view>
+  </view>
+</view>

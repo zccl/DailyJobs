@@ -1,0 +1,26 @@
+<view class="box">
+  <view class="textarea-wrp">
+    <textarea
+      auto-focus="true"
+      style="height: 20em"
+      placeholder="请输入打卡内容~"
+      bindinput="changeMention"
+      value="{{mention}}"
+    />
+    <van-uploader
+      class="add-photo"
+      file-list="{{ fileList }}"
+      deletable="{{ true }}"
+      bind:after-read="afterRead"
+      bind:delete="deleteImg"
+      max-count="3"
+      multiple="{{true}}"
+    />
+  </view>
+  <view
+    bindtap="markTarget"
+    class="add-target-line target-submit"
+  >
+    <text>打卡</text>
+  </view>
+</view>

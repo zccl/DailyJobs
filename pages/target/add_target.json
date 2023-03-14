@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cur-target": "/component/cur_target"
+  },
+  "navigationBarTitleText": "添加目标",
+  "enablePullDownRefresh": false
+}

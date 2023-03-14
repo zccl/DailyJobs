@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/mark/mark",
+    "pages/target/target",
+    "pages/more/more",
+    "pages/target/add_target",
+    "pages/more/feedback",
+    "pages/more/calendar",
+    "pages/more/notice",
+    "pages/mark_detail/mark_detail",
+    "pages/join/join",
+    "pages/more/list",
+    "pages/more/about",
+    "pages/more/join",
+    "pages/more/create",
+    "pages/target/edit_target"
+  ],
+  "window": {
+    "backgroundColor": "#eeeffe",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eeeffe",
+    "navigationBarTitleText": "日常打卡",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/mark/mark",
+        "text": "打卡",
+        "iconPath": "images/mark_b.png",
+        "selectedIconPath": "images/mark_a.png"
+      },
+      {
+        "pagePath": "pages/target/add_target",
+        "iconPath": "images/add_b.png",
+        "selectedIconPath": "images/add_a.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多",
+        "iconPath": "images/more_b.png",
+        "selectedIconPath": "images/more_a.png"
+      }
+    ],
+    "color": "#000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#fff"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

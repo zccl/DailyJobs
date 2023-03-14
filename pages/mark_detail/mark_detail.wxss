@@ -1,0 +1,57 @@
+/* pages/mark_detail/mark_detail.wxss */
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 20rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.textarea-wrp {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.textarea-wrp textarea {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 30rpx;
+  padding: 1em;
+}
+.target-submit {
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 10rpx 0;
+  width: 100%;
+  align-items: center;
+  background-color: #d18a8f;
+  border-radius: 17rpx;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60rpx;
+}
+
+.target-submit text {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.add-photo {
+  position: absolute;
+  bottom: 20rpx;
+  left: 50rpx;
+  z-index: 100;
+  font-family: "iconfont" !important;
+  font-size: 70rpx;
+  line-height: 60rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+}
